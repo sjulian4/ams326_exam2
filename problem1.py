@@ -31,7 +31,7 @@ x_vals = np.array([bisection(n) for n in n_vals])
 
 # (2) Fit the computed roots x(n) vs. n using the model function x(n) = 1 + a_1 ln n + a_2(ln n)^2 + a_3(ln n)^3
 
-# y = a1*ln(n) + a2*(ln n)^2 + a3*(ln n)^3
+# y = a_1*ln(n) + a_2*(ln n)^2 + a_3*(ln n)^3
 y = x_vals - 1
 ln_n = np.log(n_vals)
 
