@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 
 # (1) Using the Bisection Method
 def f(x, n):
-    return x**(x**x) - n # subtracting the n to set equal to 0.
+    return x**(x**x) - n # Subtracting the n to set equal to 0.
 
 def bisection(n, tol=1e-6):
     a, b = 1.0, 3.0
