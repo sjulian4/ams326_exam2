@@ -65,7 +65,7 @@ def gaussian_elimination(A_mat, b_vec):
 
 a1, a2, a3 = gaussian_elimination(M, v)
 
-print(f"Coefficients: a1={a1:.4f}, a2={a2:.4f}, a3={a3:.4f}") # Calculated with Gaussian Elimination
+print(f"Coefficients: a1={a1:.4f}, a2={a2:.4f}, a3={a3:.4f}") # Coefficients calculated with Gaussian Elimination
 
 # Table
 print("TABLE")
