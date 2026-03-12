@@ -33,13 +33,13 @@ x_vals = np.array([bisection(n) for n in n_vals])
 y = x_vals - 1
 ln_n = np.log(n_vals)
 
-# (a) Design Matrix A
+# (a) Design Matrix A  - The inconsistent overdetermined system of equations.
 # Each column is one of the powers for the ln above
 A = np.vstack([ln_n, ln_n**2, ln_n**3]).T
 
 # (b) Normal Equations: (A^T * A) * a = A^T * y
-M = A.T @ A
-v = A.T @ y
+M = A.T @ A # (A^T * A)
+v = A.T @ y # A^T * y
 
 # (c) Gaussian Elimination 
 def gaussian_elimination(A_mat, b_vec):
@@ -59,7 +59,7 @@ def gaussian_elimination(A_mat, b_vec):
             
     # 2. Back Substitution
     x = np.zeros(n)
-    for i in range(n - 1, -1, -1):
+    for i in range(n - 1, -1, -1): # Working backwards by 1
         x[i] = (aug[i, -1] - np.dot(aug[i, i+1:n], x[i+1:n])) / aug[i, i]
     return x
 
