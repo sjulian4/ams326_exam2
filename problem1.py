@@ -43,7 +43,7 @@ A = np.vstack([ln_n, ln_n**2, ln_n**3]).T
 M = A.T @ A # (A^T * A)
 v = A.T @ y # A^T * y
 
-# (c) Gaussian Elimination 
+# (c) Solve for the coefficients - Gaussian Elimination 
 def gaussian_elimination(A_mat, b_vec):
     n = len(b_vec)
     # Augment matrix with the right-hand side vector
