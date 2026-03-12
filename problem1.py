@@ -11,8 +11,8 @@ import matplotlib.pyplot as plt
 def f(x, n):
     return x**(x**x) - n # Subtracting the n to set equal to 0.
 
-def bisection(n, tol=1e-6):
-    a, b = 1.0, 3.0
+def bisection(n, tol=1e-6): # Have a tolerance greater than 4 significant figures to prevent rounding error, get to 4 significant figures later.
+    a, b = 1.0, 3.0 # Initials provided
     while (b - a) / 2.0 > tol:
         c = (a + b) / 2.0
         if f(c, n) == 0:
