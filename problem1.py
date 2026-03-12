@@ -7,7 +7,9 @@ import matplotlib.pyplot as plt
 
 # Fit the computed roots x(n) vs. n using the model function x(n) = 1 + a_1 ln n + a_2(ln n)^2 + a_3(ln n)^3
 
-# (1) Using the Bisection Method
+# (1) Solve the equation using the bisection method
+
+# This is our provided equation
 def f(x, n):
     return x**(x**x) - n # Subtracting the n to set equal to 0.
 
